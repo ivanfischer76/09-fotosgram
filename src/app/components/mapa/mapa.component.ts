@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { tokenKey } from '@angular/core/src/view';
+import { environment } from '../../../../../04-noticias/src/environments/environment';
 
 
 declare var mapboxgl: any;
@@ -9,6 +11,8 @@ declare var mapboxgl: any;
   styleUrls: ['./mapa.component.scss']
 })
 export class MapaComponent implements OnInit {
+   
+  apikey = environment.apiKey;
 
   @Input() coords: string;
   @ViewChild('mapa') mapa;
@@ -22,7 +26,7 @@ export class MapaComponent implements OnInit {
     const lng = Number(latLng[1]);
 
 
-    mapboxgl.accessToken = 'pk.eyJ1IjoiaXZhbmZpc2NoZXIiLCJhIjoiY2tkb3ljeWIxMDc1YzJwbzUzMmhubDJheCJ9.Gbho1b20coFlvmI6swL_uw';
+    mapboxgl.accessToken = this.apikey;
     const map = new mapboxgl.Map({
       container:  this.mapa.nativeElement,
       style: 'mapbox://styles/mapbox/streets-v11',

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  url: 'http://localhost:3000'
+  url: 'http://localhost:3000',
+  apiKey: '', //se necesita una apikey de mapbox aquí, de lo contrario fallará. url-api: 'https://www.mapbox.com/',
   //url: 'http://179.43.121.57:3000'
 };
 

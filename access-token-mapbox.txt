@@ -1,0 +1,3 @@
+access-token de mapbox
+se debe insertar en apikey de environment.ts y envorinment-prod.ts para que el programa funcione
+pk.eyJ1IjoiaXZhbmZpc2NoZXIiLCJhIjoiY2tkb3ljeWIxMDc1YzJwbzUzMmhubDJheCJ9.Gbho1b20coFlvmI6swL_uw
